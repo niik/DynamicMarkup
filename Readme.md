@@ -67,6 +67,41 @@ using(var hw = new HtmlTextWriter(hw))
     hw.RenderEndTag();
 }
 ```
+
+### jQuery-like syntax
+This example is intentionally messy and uses several different ways of achieving the same thing.
+Ff you dislike the jQuery-style use of lower case methods and properties; don't worry, you can
+use whichever style you want.
+
+```c#
+var tags = Markup.New;
+var entry = tags.div(@class: "blog-post");
+
+var header = tags.h2("Foo", id: "post-header-1");
+header.addClass("entry-header");
+
+header.appendTo(entry); // or entry.append(header);
+
+foreach(var line in myTextFile.SplitLines())
+	entry.append(tags.p(line));
+	
+var footer = tags.div().addClass("footer").appendTo(header);
+
+footer.add(
+	tags.div(
+		"Written by ", tags.span("Foo Bar", @class: "author")
+	)
+);
+
+// Format strings
+footer.add(
+	tags.div(
+		tags.text("Published at {0:yyyy-MM-dd}", DateTime.Now)
+	)
+)
+
+```
+
 Planned features
 ----------------
 
