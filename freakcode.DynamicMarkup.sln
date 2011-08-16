@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "freakcode.DynamicMarkup", "freakcode.DynamicMarkup\freakcode.DynamicMarkup.csproj", "{7A29B3A7-876F-478C-95FD-661A93EE9D1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "freakcode.DynamicMarkup.Tests", "freakcode.DynamicMarkup.Tests\freakcode.DynamicMarkup.Tests.csproj", "{F78AB25E-FBAC-4E9D-A757-3E6B4375A834}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F88EBFB2-7854-4760-B862-18754340201A}"
+	ProjectSection(SolutionItems) = preProject
+		freakcode.DynamicMarkup.testsettings = freakcode.DynamicMarkup.testsettings
+		freakcode.DynamicMarkup.vsmdi = freakcode.DynamicMarkup.vsmdi
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = freakcode.DynamicMarkup.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A29B3A7-876F-478C-95FD-661A93EE9D1B}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{7A29B3A7-876F-478C-95FD-661A93EE9D1B}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{7A29B3A7-876F-478C-95FD-661A93EE9D1B}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{7A29B3A7-876F-478C-95FD-661A93EE9D1B}.Debug|x86.ActiveCfg = Debug|x86
+		{7A29B3A7-876F-478C-95FD-661A93EE9D1B}.Debug|x86.Build.0 = Debug|x86
+		{7A29B3A7-876F-478C-95FD-661A93EE9D1B}.Release|Any CPU.ActiveCfg = Release|x86
+		{7A29B3A7-876F-478C-95FD-661A93EE9D1B}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{7A29B3A7-876F-478C-95FD-661A93EE9D1B}.Release|Mixed Platforms.Build.0 = Release|x86
+		{7A29B3A7-876F-478C-95FD-661A93EE9D1B}.Release|x86.ActiveCfg = Release|x86
+		{7A29B3A7-876F-478C-95FD-661A93EE9D1B}.Release|x86.Build.0 = Release|x86
+		{F78AB25E-FBAC-4E9D-A757-3E6B4375A834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F78AB25E-FBAC-4E9D-A757-3E6B4375A834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F78AB25E-FBAC-4E9D-A757-3E6B4375A834}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F78AB25E-FBAC-4E9D-A757-3E6B4375A834}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F78AB25E-FBAC-4E9D-A757-3E6B4375A834}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F78AB25E-FBAC-4E9D-A757-3E6B4375A834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F78AB25E-FBAC-4E9D-A757-3E6B4375A834}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F78AB25E-FBAC-4E9D-A757-3E6B4375A834}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F78AB25E-FBAC-4E9D-A757-3E6B4375A834}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F78AB25E-FBAC-4E9D-A757-3E6B4375A834}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
