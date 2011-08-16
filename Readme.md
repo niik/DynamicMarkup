@@ -75,7 +75,7 @@ use whichever style you want.
 
 ```c#
 var tags = Markup.New;
-var entry = tags.div(class: "blog-post");
+var entry = tags.div(@class: "blog-post");
 
 var header = tags.h2("Foo", id: "post-header-1");
 header.addClass("entry-header");
@@ -89,7 +89,7 @@ var footer = tags.div.addClass("footer").appendTo(header);
 
 footer.add(
 	tags.div(
-		"Written by ", tags.span("Foo Bar", class: "author")
+		"Written by ", tags.span("Foo Bar", @class: "author")
 	)
 );
 
