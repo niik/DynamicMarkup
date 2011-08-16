@@ -1,10 +1,41 @@
 DynamicMarkup
 =============
+An easy way of generating markup in C# without having to resort to the dreaded HtmlTextWriter. 
+Uses C# 4 dynamic bindings to provide a nice interface modelled after the jQuery API (which we all
+know rocks at manipulating markup)
 
+Documentation is sparse at the moment, check out the [unit tests](https://github.com/markus-olsson/DynamicMarkup/tree/master/freakcode.DynamicMarkup.Tests) 
+for more details.
 
 Examples
 ----------------
 
+### Html5 article
+
+	var tags = Markup.New;
+	var article = tags.article(
+		tags.h1("DynamicMarkup - html is easy"),
+		tags.p(
+			"Finally there's a new way of dealing with server-side markup creation! ",
+			"Read more at ", tags.a("github", href: "http://github.com/markus-olsson/DynamicMarkup")
+		),
+		tags.p(
+			"Hope to se you soon!"
+		)
+	);
+	
+	Console.WriteLine(article);
+
+Result
+
+	<article>
+        <h1>DynamicMarkup - html is easy</h1>
+        <p>
+			Finally there&#39;s a new way of dealing with server-side markup creation!
+			Read more at <a href="http://github.com/markus-olsson/DynamicMarkup">github</a>
+        </p>
+        <p>Hope to se you soon!</p>
+	</article>
 
 Planned features
 ----------------
@@ -15,7 +46,27 @@ Hopefully implemented as close to jQuery.css as possible, initially only with th
 but eventually with dictionary-like anonymous types as well.
 
     var p = Markup.New.p;
-		.css("background", "white")
-		.css("color", "black")
+        .css("background", "white")
+        .css("color", "black")
 	
-	Assert.AreEqual("background: white; color: black", p.style);
+    Assert.AreEqual("background: white; color: black", p.style);
+    
+License
+-------
+
+Licensed under the MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this 
+software and associated documentation files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use, copy, modify, merge, publish, 
+distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+ 
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING 
+BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
