@@ -55,7 +55,6 @@
     <Compile Include="MarkupElement.cs" />
     <Compile Include="MarkupNode.cs" />
     <Compile Include="MarkupText.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Markup.cs" />
   </ItemGroup>
