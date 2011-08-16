@@ -12,20 +12,21 @@ Examples
 
 ### Html5 article
 
-	var tags = Markup.New;
-	var article = tags.article(
-		tags.h1("DynamicMarkup - html is easy"),
-		tags.p(
-			"Finally there's a new way of dealing with server-side markup creation! ",
-			"Read more at ", tags.a("github", href: "http://github.com/markus-olsson/DynamicMarkup")
-		),
-		tags.p(
-			"Hope to se you soon!"
-		)
-	);
-	
-	Console.WriteLine(article);
+```c#
+var tags = Markup.New;
+var article = tags.article(
+	tags.h1("DynamicMarkup - html is easy"),
+	tags.p(
+		"Finally there's a new way of dealing with server-side markup creation! ",
+		"Read more at ", tags.a("github", href: "http://github.com/markus-olsson/DynamicMarkup")
+	),
+	tags.p(
+		"Hope to see you soon!"
+	)
+);
 
+Console.WriteLine(article);
+```
 Result
 
 	<article>
@@ -34,9 +35,38 @@ Result
 			Finally there&#39;s a new way of dealing with server-side markup creation!
 			Read more at <a href="http://github.com/markus-olsson/DynamicMarkup">github</a>
         </p>
-        <p>Hope to se you soon!</p>
+        <p>Hope to see you soon!</p>
 	</article>
+	
+#### The same result with HtmlTextWriter
 
+```c#
+var sb = new StringBuilder();
+
+using(var sw = new StringWriter(sb))
+using(var hw = new HtmlTextWriter(hw))
+{
+    hw.RenderBeginTag("article");
+    
+    hw.RenderBeginTag("h1");
+    hw.WriteEncodedText("DynamicMarkup - html is easy");
+    hw.RenderEndTag();
+    
+    hw.RenderBeginTag("p");
+    hw.WriteEncodedText("Finally there's a new way of dealing with server-side markup creation! Read more at ");
+    
+    hw.AddAttribute("href", "http://github.com/markus-olsson/DynamicMarkup");
+    hw.RenderBeginTag("a");
+    hw.WriteEncodedText("github");
+    hw.RenderEndTag();
+    
+    hw.RenderBeginTag("p")
+    hw.WriteEncodedText("Hope to see you soon!");
+    hw.RenderEndTag();
+    
+    hw.RenderEndTag();
+}
+```
 Planned features
 ----------------
 
