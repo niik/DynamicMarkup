@@ -70,7 +70,7 @@ using(var hw = new HtmlTextWriter(hw))
 
 ### jQuery-like syntax
 This example is intentionally messy and uses several different ways of achieving the same thing.
-Ff you dislike the jQuery-style use of lower case methods and properties; don't worry, you can
+If you dislike the jQuery-style use of lower case methods and properties; don't worry, you can
 use whichever style you want.
 
 ```c#
@@ -85,7 +85,7 @@ header.appendTo(entry); // or entry.append(header);
 foreach(var line in myTextFile.SplitLines())
 	entry.append(tags.p(line));
 	
-var footer = tags.div().addClass("footer").appendTo(header);
+var footer = tags.div.addClass("footer").appendTo(header);
 
 footer.add(
 	tags.div(
@@ -98,7 +98,7 @@ footer.add(
 	tags.div(
 		tags.text("Published at {0:yyyy-MM-dd}", DateTime.Now)
 	)
-)
+);
 
 ```
 
@@ -110,9 +110,9 @@ Planned features
 Hopefully implemented as close to jQuery.css as possible, initially only with the dual key/value overload
 but eventually with dictionary-like anonymous types as well.
 
-    var p = Markup.New.p;
+    var p = Markup.New.p
         .css("background", "white")
-        .css("color", "black")
+        .css("color", "black");
 	
     Assert.AreEqual("background: white; color: black", p.style);
     
